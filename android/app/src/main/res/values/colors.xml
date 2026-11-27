@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warm earthy palette inspired by Santali landscapes. Brand colors used by the splash screen and launcher icon. -->
+    <color name="brand_terracotta">#9C4A1A</color>
+    <color name="brand_ochre">#E0A526</color>
+    <color name="brand_sand">#FFF8F2</color>
+    <color name="brand_night">#1E1410</color>
+</resources>

@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Noto Sans Ol Chiki";
+  src: url("fonts/noto_sans_ol_chiki_regular.ttf") format("truetype");
+  font-display: swap;
+}
+:root { color-scheme: light dark; --accent: #b5523b; --bg: #f6efe3; --fg: #2a211b; --card: #fffbf4; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1b1a17; --fg: #edE3d3; --card: #26231f; --accent: #f0a08a; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.6; }
+header { padding: 2rem 1.25rem 1rem; text-align: center; }
+header h1 { margin: 0; color: var(--accent); font-size: 2rem; }
+main { max-width: 40rem; margin: 0 auto; padding: 0 1.25rem; }
+section { background: var(--card); border-radius: 12px; padding: 1rem 1.25rem; margin: 1rem 0; }
+section h2 { margin-top: 0; font-size: 1.15rem; }
+.notice { border-left: 4px solid var(--accent); }
+.ol { font-family: "Noto Sans Ol Chiki", system-ui, sans-serif; }
+textarea { width: 100%; font-size: 1.25rem; padding: 0.75rem; border-radius: 8px; border: 1px solid #8884; background: transparent; color: inherit; }
+a { color: var(--accent); }
+footer { text-align: center; padding: 2rem 1rem; font-size: 0.9rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
