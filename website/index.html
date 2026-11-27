@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Santali Speaks reads Ol Chiki Santali text aloud.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Santali Speaks · ᱥᱟᱱᱛᱟᱲᱤ ᱾</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 class="ol">ᱥᱟᱱᱛᱟᱲᱤ ᱥᱩᱱᱟᱣ</h1>
+    <p>Santali Speaks</p>
+  </header>
+  <main>
+    <section>
+      <h2>What it does</h2>
+      <p>Santali Speaks reads Santali text written in Ol Chiki aloud. Copy Ol Chiki text in any app, open Santali Speaks, and tap Speak. It works offline for text you have already listened to.</p>
+    </section>
+
+    <section class="notice" role="note">
+      <h2>Current status</h2>
+      <p>Santali speech is <strong>not yet available</strong>. The speech service that would produce Ol Chiki audio needs an access key that this project does not have yet. Until that is in place, the app will tell you that speech is unavailable. It will never read your text with another language's voice.</p>
+    </section>
+
+    <section>
+      <h2>Try the Ol Chiki text box</h2>
+      <p>This box checks what you type or paste. It does not send anything anywhere.</p>
+      <label for="text" class="sr">Ol Chiki text</label>
+      <textarea id="text" class="ol" rows="5" placeholder="ᱡᱚᱦᱟᱨ"></textarea>
+      <p id="result" role="status" aria-live="polite"></p>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <p>Your text stays on your phone. The app reads the clipboard only when you tap Paste, and it does not track you.</p>
+    </section>
+
+    <section>
+      <h2>About the font</h2>
+      <p>Ol Chiki text is shown in Noto Sans Ol Chiki, licensed under the SIL Open Font License 1.1 (see <a href="fonts/NotoSansOlChiki-OFL.txt">licence</a>).</p>
+    </section>
+  </main>
+  <footer>
+    <p><a href="https://github.com/kbaske/Santali-Speaks">Source code on GitHub</a></p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
