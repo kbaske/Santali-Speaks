@@ -22,12 +22,17 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - uses: android-actions/setup-android@v3
-
       - name: Install Android SDK components
         run: |
-          yes | sdkmanager --licenses > /dev/null
-          sdkmanager "platforms;android-35" "build-tools;35.0.0" "platform-tools"
+          SDK="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          echo "SDK=$SDK"
+          ls "$SDK" || true
+          SDKMGR="$(ls -d "$SDK"/cmdline-tools/*/bin 2>/dev/null | head -1)"
+          if [ -z "$SDKMGR" ]; then SDKMGR="$SDK/tools/bin"; fi
+          echo "$SDKMGR" >> "$GITHUB_PATH"
+          export PATH="$SDKMGR:$PATH"
+          yes | sdkmanager --sdk_root="$SDK" --licenses > /dev/null
+          sdkmanager --sdk_root="$SDK" "platforms;android-35" "build-tools;35.0.0" "platform-tools"
 
       - uses: gradle/actions/setup-gradle@v4
         with:
