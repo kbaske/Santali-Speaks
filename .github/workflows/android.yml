@@ -39,7 +39,18 @@ jobs:
           gradle-version: 8.9
 
       - name: Unit tests and debug APK
-        run: gradle --no-daemon --stacktrace testDebugUnitTest assembleDebug
+        id: build
+        run: gradle --no-daemon --stacktrace testDebugUnitTest assembleDebug 2>&1 | tee build.log; exit ${PIPESTATUS[0]}
+
+      - name: Publish build errors as annotations
+        if: failure()
+        run: |
+          grep -E "^e: |What went wrong|Could not |FAILED|Execution failed|Caused by|Exception|rror:" build.log | head -45 | while IFS= read -r line; do
+            echo "::error title=build::$(echo "$line" | cut -c1-400 | sed 's/%/%25/g')"
+          done
+          grep -A3 "What went wrong" build.log | head -20 | while IFS= read -r line; do
+            echo "::warning title=detail::$(echo "$line" | cut -c1-400)"
+          done
 
       - name: Upload debug APK
         if: success()
