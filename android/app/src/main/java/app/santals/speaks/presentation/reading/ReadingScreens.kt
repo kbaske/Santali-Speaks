@@ -68,6 +68,7 @@ import app.santals.speaks.presentation.theme.OlChikiFont
 import app.santals.speaks.domain.model.SpeechServiceStatus
 import app.santals.speaks.service.reading.SessionStatus
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     vm: ReadingViewModel,
