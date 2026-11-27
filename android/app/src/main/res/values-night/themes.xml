@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SantaliSpeaks.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/brand_night</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.SantaliSpeaks</item>
+        <item name="android:windowBackground">@color/brand_night</item>
+    </style>
+
+    <style name="Theme.SantaliSpeaks" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/brand_night</item>
+        <item name="android:statusBarColor">@color/brand_night</item>
+        <item name="android:navigationBarColor">@color/brand_night</item>
+    </style>
+</resources>

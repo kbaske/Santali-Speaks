@@ -1,0 +1,21 @@
+{
+  "name": "santali-speaks-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Secure proxy between the Santali Speaks Android app and BHASHINI Santali text-to-speech. Also serves the speaks.santals.in website.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "scripts": {
+    "start": "node src/main.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify:santali-tts": "node scripts/verify-santali-tts.mjs",
+    "check": "node --check src/main.mjs && node --check src/server.mjs && node --check src/bhashini.mjs && node --check src/config.mjs && node --check src/olchiki.mjs && node --check src/audio.mjs && node --check src/ratelimit.mjs"
+  },
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kbaske/Santali-Speaks"
+  }
+}
